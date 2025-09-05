@@ -24,9 +24,9 @@ namespace NumberGuess
                 switch (secim)
                 {
                     case "1": Easy(); break;
-                    case "2":  break;
-                    case "3":  break;
-                    case "4":  break;
+                    case "2": Medium(); break;
+                    case "3": Hard(); break;
+                    case "4": Expert(); break;
                 }
 
 
@@ -48,7 +48,41 @@ namespace NumberGuess
 
                 int GuessLimit = 10;
                 int min = 1;
-                int max = 3;
+                int max = 50;
+                int sayi = guessNumber.ChooseLevelRandom(min, max); // döngüden önce kullan her seferinde yeni numara üretme  
+
+                playGame.PlayGames(GuessLimit, min, max, sayi);
+
+            }
+
+            void Medium()
+            {
+
+                int GuessLimit = 7;
+                int min = 1;
+                int max = 100;
+                int sayi = guessNumber.ChooseLevelRandom(min, max); // döngüden önce kullan her seferinde yeni numara üretme  
+
+                playGame.PlayGames(GuessLimit, min, max, sayi);
+
+            }
+            void Hard()
+            {
+
+                int GuessLimit = 8;
+                int min = 1;
+                int max = 500;
+                int sayi = guessNumber.ChooseLevelRandom(min, max); // döngüden önce kullan her seferinde yeni numara üretme  
+
+                playGame.PlayGames(GuessLimit, min, max, sayi);
+
+            }
+            void Expert()
+            {
+
+                int GuessLimit = 10;
+                int min = 1;
+                int max = 1000;
                 int sayi = guessNumber.ChooseLevelRandom(min, max); // döngüden önce kullan her seferinde yeni numara üretme  
 
                 playGame.PlayGames(GuessLimit, min, max, sayi);
